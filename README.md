@@ -1,6 +1,4 @@
 # Customer Review Insights & Response Generator
-
-
 Organizations struggle to process high volume of unstructured customer feedback from review
 platforms. Manual analysis is slow, inconsistent, and can't keep up, making it hard to generate
 personalized responses. This project is an endeavour to develop an automated, end-to-end
@@ -20,7 +18,7 @@ quality
           .Email Alert
           .Slack Alert
      # Accuracy /Evaluations Strategy
-        .(Accuracy Metrics)
+        (Accuracy Metrics)
         
      # Safety and Reliability
         (Safety Metrics)
