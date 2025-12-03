@@ -12,3 +12,27 @@ generate personalized responses, store in a structured format, and support trend
 visualization via Tableau dashboards. The goal is a scalable, LLM-driven automation framework
 to streamline customer experience management, reduce manual workload, and improve insight
 quality
+
+# Solution Architecture
+
+# N8N Workflow Implemented
+     # Exception handling strategy
+          .Email Alert
+          .Slack Alert
+     # Accuracy /Evaluations Strategy
+        .(Accuracy Metrics)
+        
+     # Safety and Reliability
+        (Safety Metrics)
+        
+     # Operations & Monitoring
+       (LLM Ops - Metrics)
+  
+# Prompt Templates (Stored in Redis Cache)
+
+# Simulation Interface - End-User /Customer Review
+     1. Through N8N Form
+     2. Through Postman Collection Runner
+# Sentiment Trend (Tableau Visualization)
+
+  
