@@ -31,6 +31,6 @@ quality
 # Simulation Interface - End-User /Customer Review
      1. Through N8N Form
      2. Through Postman Collection Runner
-# Sentiment Trend (Tableau Visualization)
+# Sentiment Trend (Tableau Visualization Dashboard)
 
   
