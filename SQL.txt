@@ -1,0 +1,94 @@
+USE [TS_Capstone]
+GO
+
+/****** Object:  Table [dbo].[CustomerReviews]    Script Date: 2025-11-23 07:41:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CustomerReviews](
+	[Seq_no] [bigint] IDENTITY(1,1) NOT NULL,
+	[uuid] [nvarchar](50) NOT NULL,
+	[ReviewID] [nvarchar](50) NOT NULL,
+	[ReviewDate] [date] NULL,
+	[Source] [nvarchar](50) NULL,
+	[ProductID] [nvarchar](50) NULL,
+	[ProductCategory] [nvarchar](500) NULL,
+	[CustomerName] [nvarchar](100) NULL,
+	[CustomerEmail] [nvarchar](100) NULL,
+	[OriginalReviewText] [nvarchar](max) NOT NULL,
+	[OriginalLanguage] [nvarchar](10) NULL,
+	[EnTranslatedText] [nvarchar](max) NULL,
+	[EnResponseDraft] [nvarchar](max) NULL,
+	[OriginalLangResponseDraft] [nvarchar](max) NULL,
+	[Rating] [int] NULL,
+	[Sentiment] [nvarchar](20) NULL,
+	[Topic] [nvarchar](50) NULL,
+	[TopicConfidence] [decimal](3, 2) NULL,
+	[IssueCluster] [nvarchar](50) NULL,
+	[IssueConfidence] [decimal](3, 2) NULL,
+	[ProcessedAt] [datetime] NULL,
+	[ProcessingStatus] [nvarchar](50) NULL,
+	[ErrorDesc] [nvarchar](max) NULL,
+	[DurationSec] [nvarchar](10) NULL,
+	[LLM_duration] [nvarchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Seq_no] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[CustomerReviews] ADD  DEFAULT (getdate()) FOR [ReviewDate]
+GO
+
+ALTER TABLE [dbo].[CustomerReviews] ADD  DEFAULT (getdate()) FOR [ProcessedAt]
+GO
+----------------------------------------------------------------------------------------------------------------------------------------------
+USE [TS_Capstone]
+GO
+
+/****** Object:  Table [dbo].[TrendAnalysis]    Script Date: 2025-11-23 07:41:41 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TrendAnalysis](
+	[TrendID] [bigint] IDENTITY(1,1) NOT NULL,
+	[TimePeriodStart] [date] NOT NULL,
+	[TimePeriodEnd] [date] NOT NULL,
+	[ReviewCount] [int] NULL,
+	[NegativeCount] [int] NULL,
+	[PositiveCount] [int] NULL,
+	[NeutralCount] [int] NULL,
+	[AverageRating] [decimal](3, 2) NULL,
+	[ProcessedAt] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TrendID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[TrendAnalysis] ADD  DEFAULT ((0)) FOR [ReviewCount]
+GO
+
+ALTER TABLE [dbo].[TrendAnalysis] ADD  DEFAULT ((0)) FOR [NegativeCount]
+GO
+
+ALTER TABLE [dbo].[TrendAnalysis] ADD  DEFAULT ((0)) FOR [PositiveCount]
+GO
+
+ALTER TABLE [dbo].[TrendAnalysis] ADD  DEFAULT ((0)) FOR [NeutralCount]
+GO
+
+ALTER TABLE [dbo].[TrendAnalysis] ADD  DEFAULT (getdate()) FOR [ProcessedAt]
+GO
+
+
+
+
