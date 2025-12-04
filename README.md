@@ -21,8 +21,8 @@ quality
    - Templates are stored in Redis Cache
 
 # N8N Workflows
-     - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
-     - Exception handling strategy
+   - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
+   - Exception handling strategy
           .Email Alert (to operations)
           .Slack Alert (to operations)
           
