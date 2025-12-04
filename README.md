@@ -13,7 +13,7 @@ quality
 
 # Solution Architecture
 
-# N8N Workflow Implemented
+# N8N Workflows
      # Exception handling strategy
           .Email Alert
           .Slack Alert
