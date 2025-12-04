@@ -23,8 +23,8 @@ quality
 # N8N Workflows
    - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
    - Exception handling strategy
-          -Email Alert (to operations)
-          -Slack Alert (to operations)
+          . Email Alert (to operations)
+          - Slack Alert (to operations)
           
 # Evaluations strategy   
      - Accuracy (using LLM as judge)
