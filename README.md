@@ -13,24 +13,28 @@ quality
 
 # Solution Architecture
 
-# N8N Workflows
-     # Exception handling strategy
-          .Email Alert
-          .Slack Alert
-     # Accuracy /Evaluations Strategy
-        (Accuracy Metrics)
-        
-     # Safety and Reliability
-        (Safety Metrics)
-        
-     # Operations & Monitoring
-       (LLM Ops - Metrics)
-  
-# Prompt Templates (Stored in Redis Cache)
-
 # Simulation Interface - End-User /Customer Review
      1. Through N8N Form
      2. Through Postman Collection Runner
+     
+# Review Response Prompt Templates (Stored in Redis Cache) 
+
+# N8N Workflows
+     - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
+     - Exception handling strategy
+          .Email Alert (to operations)
+          .Slack Alert (to operations)
+          
+# Evaluations strategy   
+     - Accuracy (using LLM as judge)
+        (Accuracy Metrics)
+    
+     - Safety and Reliability (Guardrails, Failover)
+        (Safety Metrics)
+        
+     - Operations & Monitoring (using Langsmith and timestamp calculations)
+         (LLM Ops - Metrics)
+
 # Sentiment Trend (Tableau Visualization Dashboard)
 
   
