@@ -17,7 +17,8 @@ quality
      1. Through N8N Form
      2. Through Postman Collection Runner
      
-# Review Response Prompt Templates (Stored in Redis Cache) 
+# Review Response Prompt Templates
+   - Templates are stored in Redis Cache
 
 # N8N Workflows
      - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
