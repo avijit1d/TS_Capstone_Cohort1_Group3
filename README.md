@@ -21,19 +21,19 @@ quality
    - Templates are stored in Redis Cache
 
 # N8N Workflows
-   - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
-   - Exception handling strategy
-          . Email Alert (to operations)
+    - LLM Driven Language Translation, Sentiment Analysis, Topic categorization, and Issue classification
+    - Exception handling strategy
+          - Email Alert (to operations)
           - Slack Alert (to operations)
           
 # Evaluations strategy   
-     - Accuracy (using LLM as judge)
+    - Accuracy (using LLM as judge)
         (Accuracy Metrics)
     
-     - Safety and Reliability (Guardrails, Failover)
+    - Safety and Reliability (Guardrails, Failover)
         (Safety Metrics)
         
-     - Operations & Monitoring (using Langsmith and timestamp calculations)
+    - Operations & Monitoring (using Langsmith and timestamp calculations)
          (LLM Ops - Metrics)
 
 # Sentiment Trend (Tableau Visualization Dashboard)
